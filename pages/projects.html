@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>FKPI</h2>
+
+        <ul>
+
+            <li
+                onclick="window.location.href='../index.html'">
+                Dashboard
+            </li>
+
+            <li class="active"
+                onclick="window.location.href='projects.html'">
+                Projects
+            </li>
+
+            <li
+                onclick="window.location.href='tasks.html'">
+                Task Management
+            </li>
+
+            <li onclick="window.location.href='freelancers.html'">
+                Freelancers
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                Reports
+            </li>
+
+            <li onclick="window.location.href='analytics.html'">
+                KPI Analytics
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Projects</h1>
+        </div>
+
+        <!-- Upload Section -->
+
+        <div class="upload-card">
+
+            <div class="upload-icon">
+                📁
+            </div>
+
+            <h3>Upload Excel Project</h3>
+
+            <p>
+                Drag & Drop your Excel file here
+                <br>
+                or click Browse
+            </p>
+
+            <input
+                type="file"
+                id="excelFile"
+                accept=".xlsx,.xls"
+                hidden>
+
+            <button
+                id="browseBtn"
+                class="btn btn-primary">
+
+                Browse Excel
+
+            </button>
+
+            <div id="selectedFile" class="selected-file">
+
+                No file selected
+
+            </div>
+
+            <button
+                id="uploadBtn"
+                class="btn btn-success">
+
+                Upload Project
+
+            </button>
+
+        </div>
+
+        <div class="manual-project-card">
+
+            <h3>Create Project Manually</h3>
+
+            <form id="manualProjectForm">
+
+                <input
+                    type="text"
+                    id="manualProjectId"
+                    placeholder="Project ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="manualProjectName"
+                    placeholder="Project Name"
+                    required
+                >
+
+                <button type="submit">
+
+                    Create Project
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Projects Section -->
+
+        <div class="section">
+
+            <h2>Uploaded Projects</h2>
+
+            <div
+                class="projects-grid"
+                id="projectsContainer">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="../js/modules/projects.js"></script>
+
+</body>
+</html>

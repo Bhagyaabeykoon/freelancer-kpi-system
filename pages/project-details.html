@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Project Details</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>FKPI</h2>
+
+        <ul>
+
+            <li
+                onclick="window.location.href='../index.html'">
+                Dashboard
+            </li>
+
+            <li class="active"
+                onclick="window.location.href='projects.html'">
+                Projects
+            </li>
+
+            <li
+                onclick="window.location.href='tasks.html'">
+                Task Management
+            </li>
+
+            <li>
+                Reports
+            </li>
+
+            <li>
+                KPI Analytics
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <!-- Project Header -->
+
+<div class="project-header">
+
+    <div>
+
+        <h1 id="projectTitle">
+            📁 Project Details
+        </h1>
+
+        <p class="project-id" id="projectInfo">
+            Project Information
+        </p>
+
+    </div>
+
+    <div class="project-actions">
+
+        <button
+            class="back-btn"
+            onclick="history.back()">
+
+            ← Back
+
+        </button>
+
+        <button
+            class="export-btn"
+            onclick="exportCSV()">
+
+            ⬇ Export Report
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- KPI Cards -->
+
+<div class="kpi-grid">
+
+    <div class="kpi-card">
+
+        <div class="kpi-icon blue">
+            📋
+        </div>
+
+        <div>
+
+            <span>Total Tasks</span>
+
+            <h2 id="projectTotalTasks">0</h2>
+
+        </div>
+
+    </div>
+
+    <div class="kpi-card">
+
+        <div class="kpi-icon green">
+            ✅
+        </div>
+
+        <div>
+
+            <span>Completed</span>
+
+            <h2 id="projectCompletedTasks">0</h2>
+
+        </div>
+
+    </div>
+
+    <div class="kpi-card">
+
+        <div class="kpi-icon orange">
+            🟡
+        </div>
+
+        <div>
+
+            <span>Pending</span>
+
+            <h2 id="projectPendingTasks">0</h2>
+
+        </div>
+
+    </div>
+
+    <div class="kpi-card">
+
+        <div class="kpi-icon purple">
+            🎯
+        </div>
+
+        <div>
+
+            <span>Achievement</span>
+
+            <h2 id="projectAchievement">0%</h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Tasks -->
+
+        <div class="section">
+
+            <div class="section-header">
+
+                <h2>Project Tasks</h2>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Freelancer</th>
+                        <th>Task</th>
+                        <th>Expected Date</th>
+                        <th>Actual Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tasksTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/modules/projectDetails.js">
+
+</script>
+
+</body>
+
+</html>

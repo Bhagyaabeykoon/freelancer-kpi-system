@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Analytics</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>FKPI</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='../index.html'">
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='projects.html'">
+                Projects
+            </li>
+
+            <li onclick="window.location.href='tasks.html'">
+                Task Management
+            </li>
+
+            <li onclick="window.location.href='freelancers.html'">
+                Freelancers
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                Reports
+            </li>
+
+            <li class="active"
+                onclick="window.location.href='analytics.html'">
+                KPI Analytics
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Analytics Dashboard</h1>
+
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Total Tasks</h3>
+
+                <h2 id="analyticsTotalTasks">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <h2 id="analyticsCompleted">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <h2 id="analyticsPending">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Achievement</h3>
+
+                <h2 id="analyticsAchievement">0%</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>On-Time Delivery</h3>
+
+                <h2 id="onTimeDelivery">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- Charts -->
+
+        <div class="charts-grid">
+
+            <div class="chart-card">
+
+                <h3>Task Status Distribution</h3>
+
+                <canvas id="statusChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>Freelancer Performance</h3>
+
+                <canvas id="performanceChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../js/modules/analytics.js"></script>
+
+</body>
+
+</html>

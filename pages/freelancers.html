@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freelancers</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>FKPI</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='../index.html'">
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='projects.html'">
+                Projects
+            </li>
+
+            <li onclick="window.location.href='tasks.html'">
+                Task Management
+            </li>
+
+            <li class="active"
+                onclick="window.location.href='freelancers.html'">
+                Freelancers
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                Reports
+            </li>
+
+            <li onclick="window.location.href='analytics.html'">
+                KPI Analytics
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Freelancers</h1>
+        </div>
+
+        <!-- KPI Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Freelancers</h3>
+                <h2 id="totalFreelancers">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Available</h3>
+                <h2 id="availableFreelancers">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Busy</h3>
+                <h2 id="busyFreelancers">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Inactive</h3>
+                <h2 id="inactiveFreelancers">0</h2>
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="section">
+
+            <div class="section-header">
+
+                <h2>Freelancer List</h2>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="window.location.href='add-freelancer.html'">
+
+                    + Add Freelancer
+
+                </button>
+
+            </div>
+
+            <div class="table-header">
+
+                <input
+                    type="text"
+                    id="searchFreelancer"
+                    placeholder="Search Freelancer...">
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Skills</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="freelancerTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/modules/freelancers.js"></script>
+
+</body>
+</html>

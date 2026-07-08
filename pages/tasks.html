@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>FKPI</h2>
+
+        <ul>
+
+            <li
+                onclick="window.location.href='../index.html'">
+                Dashboard
+            </li>
+
+            <li
+                onclick="window.location.href='projects.html'">
+                Projects
+            </li>
+
+            <li class="active"
+                onclick="window.location.href='tasks.html'">
+                Task Management
+            </li>
+
+            <li onclick="window.location.href='freelancers.html'">
+                Freelancers
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                Reports
+            </li>
+
+            <li onclick="window.location.href='analytics.html'">
+                KPI Analytics
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Task Management</h1>
+        </div>
+
+        <div class="task-toolbar">
+
+            <input
+                type="text"
+                id="searchTask"
+                placeholder="Search task...">
+
+            <select
+                id="statusFilter"
+                onchange="renderTasks()">
+
+                <option value="All">All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+                <option value="Repeat">Repeat</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Cancelled">Cancelled</option>
+
+            </select>
+
+        </div>
+
+        <div class="section">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Freelancer</th>
+                        <th>Task</th>
+                        <th>Expected Date</th>
+                        <th>Actual Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+
+                <tbody id="tasksBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="form-container">
+
+        <h2>Add New Task</h2>
+
+        <form id="taskForm">
+
+            <input
+                type="text"
+                id="projectId"
+                placeholder="Project ID"
+                required
+            >
+
+            <input
+                type="text"
+                id="projectName"
+                placeholder="Project Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="freelancer"
+                placeholder="Freelancer Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="taskName"
+                placeholder="Task"
+                required
+            >
+
+            <input
+                type="date"
+                id="expectedDate"
+                required
+            >
+
+            <button type="submit">
+                Add Task
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="../js/tasks.js"></script>
+
+</body>
+</html>

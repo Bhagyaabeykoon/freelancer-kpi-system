@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reports</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h2>FKPI</h2>
+
+            <ul>
+
+                <li onclick="window.location.href='../index.html'">
+                    Dashboard
+                </li>
+
+                <li onclick="window.location.href='projects.html'">
+                    Projects
+                </li>
+
+                <li onclick="window.location.href='tasks.html'">
+                    Task Management
+                </li>
+
+                <li onclick="window.location.href='freelancers.html'">
+                    Freelancers
+                </li>
+
+                <li class="active"
+                    onclick="window.location.href='reports.html'">
+                    Reports
+                </li>
+
+                <li onclick="window.location.href='analytics.html'">
+                    KPI Analytics
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Main Content -->
+
+        <div class="main">
+
+            <div class="topbar">
+                <h1>Reports</h1>
+            </div>
+
+
+            <!-- Summary Cards -->
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Projects</h3>
+                    <h2 id="reportProjects">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Total Tasks</h3>
+                    <h2 id="reportTasks">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Completed</h3>
+                    <h2 id="reportCompleted">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Pending</h3>
+                    <h2 id="reportPending">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="top-performer-card">
+
+                <h3>🏆 Top Performer</h3>
+
+                <h2 id="topPerformerName">
+                    -
+                </h2>
+
+                <p>
+
+                    Completion Rate:
+
+                    <span id="topPerformerKPI">
+
+                        0%
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <!-- Freelancer Performance -->
+
+            <div class="section">
+
+                <div class="section-header">
+
+                    <h2>Freelancer Performance</h2>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="exportReport()">
+
+                        Export Report
+
+                    </button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Freelancer</th>
+                            <th>Total Tasks</th>
+                            <th>Completed</th>
+                            <th>Repeat</th>
+                            <th>Rejected</th>
+                            <th>KPI %</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="performanceTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/modules/reports.js"></script>
+
+</body>
+
+</html>
